@@ -30,15 +30,15 @@ const features = [
     icon: MessageSquare,
   },
   {
-    title: "Staff Management",
+    title: "Team Collaboration Made Instant",
     description:
-      "Comprehensive profiles and performance tracking for every member.",
+      "Stay connected with project teams through real-time chats for faster decisions and smoother communication.",
     icon: Users,
   },
   {
-    title: "Smart Dashboard",
+    title: "Smart Task Views",
     description:
-      "Data-driven insights to help you make better business decisions.",
+      "Easily organize, track, and prioritize work with smart filters and pinned tasks across projects and milestones.",
     icon: BarChart3,
   },
   {
@@ -50,8 +50,34 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-24 bg-[#f8fafc]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-24 bg-[#f8fafc] overflow-hidden" id="feature">
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* Heading */}
+        <div className="text-center mb-16">
+
+
+          <motion.h2
+            initial={{ opacity: 0, y: 36 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring" as const, stiffness: 50, damping: 16, delay: 0.13 }}
+            className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0f172a]"
+          >
+            Our Features
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring" as const, stiffness: 50, damping: 16, delay: 0.22 }}
+            className="mt-4 text-gray-500 text-lg max-w-xl mx-auto"
+          >
+            Everything your team needs to stay organised, aligned, and productive.
+          </motion.p>
+        </div>
+
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {features.map((feature, i) => {
@@ -63,17 +89,12 @@ export default function Features() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                transition={{ type: "spring" as const, stiffness: 50, damping: 16, delay: i * 0.1 }}
                 className="group"
               >
-                <div className="bg-white rounded-2xl p-8 border border-gray-100 transition-all duration-300 hover:shadow-md">
+                <div className="bg-white p-8 border border-gray-300 transition-all duration-300 hover:shadow-md">
                   {/* Icon */}
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center 
-  bg-blue-100 text-blue-600 
-  transition-all duration-300 
-  group-hover:bg-blue-600 group-hover:text-white"
-                  >
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-blue-100 text-blue-600 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
                     <Icon size={22} />
                   </div>
 
@@ -91,6 +112,7 @@ export default function Features() {
             );
           })}
         </div>
+
       </div>
     </section>
   );

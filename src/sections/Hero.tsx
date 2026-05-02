@@ -28,19 +28,18 @@ export default function Hero() {
             Manage Your Team
             <br />
             <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-              Smarter, Not Harder
+              Smarter. Faster. Better.
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="mt-6 text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
-            Track work, manage staff, and never miss deadlines with automated
-            monitoring & WhatsApp alerts.
+          <p className="mt-6 text-gray-500 max-w-2xl mx-auto text-lg text-justify md:text-center leading-relaxed">
+            Track work, manage staff, and never miss deadlines with automated monitoring & WhatsApp alerts.
           </p>
 
           {/* CTA */}
           <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl flex items-center gap-2 text-sm font-medium shadow-md transition">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3  flex items-center gap-2 text-sm font-medium shadow-md transition">
               Start Free Trial
               <ArrowRight size={16} />
             </button>
