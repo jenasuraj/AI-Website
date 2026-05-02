@@ -29,7 +29,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-[#f7f8fb] px-6 py-28">
+    <section className="bg-[#f7f8fb] px-6 py-28" id="how-it-works">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <motion.div
@@ -43,7 +43,7 @@ export default function HowItWorks() {
             How It Works
           </h2>
 
-          <p className="mt-5 text-lg text-[#64748b]">
+          <p className="mt-5 text-lg text-[#64748b] text-justify md:text-center">
             Simple 4-step process to transform your team management.
           </p>
         </motion.div>
@@ -65,7 +65,7 @@ export default function HowItWorks() {
                   duration: 0.5,
                   delay: i * 0.1,
                 }}
-                className="relative flex flex-col items-center text-center"
+                className="relative flex flex-col  rounded-2xl shadow-sm md:shadow-none p-2 md:p-0 items-center text-center border border-gray-300 md:border-none"
               >
                 {/* Number Circle */}
                 <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-[#edf2f7] bg-white shadow-sm">

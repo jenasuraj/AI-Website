@@ -64,7 +64,7 @@ export default function FAQ() {
                 value={`item-${i}`}
                 className="border-none"
               >
-                <div className="bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+                <div className="bg-white border border-gray-200 px-6 py-5 shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
                   <AccordionTrigger className="flex items-center justify-between text-sm font-medium text-gray-900 hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>

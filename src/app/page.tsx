@@ -9,6 +9,7 @@ import Testimonials from "@/sections/Testimonials";
 import FAQ from "@/sections/FAQ";
 import FinalCTA from "@/sections/FinalCTA";
 import Footer from "@/sections/Footer";
+import ContactForm from "@/sections/ContactForm";
 
 export default function Home() {
   return (
@@ -20,9 +21,10 @@ export default function Home() {
       <HowItWorks />
       <Benefits />
       <CTA />
-      <Testimonials />
+      {/**<Testimonials /> */}
       <FAQ />
-      <FinalCTA />
+      {/**<FinalCTA /> */}
+      <ContactForm/>
       <Footer />
     </main>
   );

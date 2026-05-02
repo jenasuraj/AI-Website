@@ -4,66 +4,80 @@ import { motion } from "framer-motion";
 
 const cards = [
   {
-    title: "Emerging Company",
+    title: "Interior Designer",
     description:
-      "Perfect for a growing team of 20+ staff scaling their operations.",
+      "Interior Designer",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop",
+      "/collection/interior-designer.png",
+  },
+  {
+    title: "MSME Business",
+    description:
+      "MSME Business",
+    image:
+      "/collection/msme-business.png",
   },
   {
     title: "Real Estate",
-    description:
-      "Track agents, property showings, and client follow-ups seamlessly.",
+    description: "Real Estate",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+      "/collection/real-estate.png",
   },
   {
-    title: "Interior Designer",
-    description: "Track vendors, progress and client follow up seamlessly",
+    title: "Render",
+    description: "Render",
     image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    title: "Event Management",
-    description: "Coordinate vendors, staff schedules, and event logistics.",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop",
+         "/collection/render.jpeg",
   },
 ];
 
 export default function DesignedForTeams() {
   return (
-    <section className="bg-[#f7f8fb] px-6 py-28">
+    <section className="bg-[#f7f8fb] px-6 py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl">
-        {/* Heading */}
-        <div className="text-center">
-          <h2 className="text-5xl font-extrabold tracking-tight text-[#0f172a]">
-            Designed for Modern Teams
-          </h2>
 
-          <p className="mt-6 text-xl text-[#64748b]">
+        {/* Heading — slides up from bottom */}
+        <div className="text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ type: "spring" as const, stiffness: 45, damping: 16, delay: 0.1 }}
+            className="text-5xl font-extrabold tracking-tight text-[#0f172a]"
+          >
+            Designed for Modern Teams
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ type: "spring" as const, stiffness: 45, damping: 16, delay: 0.22 }}
+            className="mt-6 text-xl text-[#64748b]"
+          >
             Clean, intuitive interface that your staff will love to use.
-          </p>
+          </motion.p>
         </div>
 
-        {/* Cards */}
+        {/* Cards — staggered scale + blur + y reveal */}
         <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              whileHover={{
-                y: -10,
-                scale: 1.02,
-              }}
+              initial={{ opacity: 0, y: 60, scale: 0.93, filter: "blur(8px)" }}
+              whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 18,
+                type: "spring" as const,
+                stiffness: 50,
+                damping: 17,
+                delay: 0.15 + index * 0.13,
               }}
-              className="group cursor-pointer rounded-[34px] border border-[#dbe7ff] bg-[#f3f7ff] p-7 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-blue-100/60"
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group cursor-pointer  bg-[#f3f7ff] border border-gray-300 p-7 shadow-sm transition-shadow duration-300 hover:shadow-2xl hover:shadow-blue-100/60"
             >
               {/* Image */}
-              <div className="overflow-hidden rounded-[28px]">
+              <div className="overflow-hidden">
                 <motion.img
                   src={card.image}
                   alt={card.title}
@@ -86,6 +100,7 @@ export default function DesignedForTeams() {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
