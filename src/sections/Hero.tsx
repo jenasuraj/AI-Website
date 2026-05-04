@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Zap } from "lucide-react";
+import Link from "next/link";
+
 
 export default function Hero() {
   return (
@@ -39,10 +41,10 @@ export default function Hero() {
 
           {/* CTA */}
           <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3  flex items-center gap-2 text-sm font-medium shadow-md transition">
+            <Link href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3  flex items-center gap-2 text-sm font-medium shadow-md transition">
               Start Free Trial
               <ArrowRight size={16} />
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
@@ -13,10 +14,9 @@ export default function Footer() {
           
           {/* Left - Brand */}
           <div className="max-w-md">
-            <div className="flex items-center gap-2 font-semibold text-lg">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-blue-400" />
-              UppTask
-            </div>
+            <Link href="/" className="flex items-center gap-2 font-semibold text-lg">
+            <Image src="/icon.png" alt="logo" width={140} height={60} priority />
+            </Link>
 
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
               Smart team management platform designed to simplify workflows,
@@ -40,7 +40,7 @@ export default function Footer() {
             <div>
               <h4 className="text-sm font-semibold">Company</h4>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li className="hover:text-foreground cursor-pointer">About</li>
+             
                 <Link className="hover:text-foreground cursor-pointer" href="#how-it-works">How it works</Link>
               </ul>
             </div>
@@ -49,10 +49,27 @@ export default function Footer() {
              {/* socials */}
             <div>
               <h4 className="text-sm font-semibold">Connect</h4>
-              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li className="hover:text-foreground cursor-pointer">Number</li>
-                <li className="hover:text-foreground cursor-pointer">Facebook</li>
-                <li className="hover:text-foreground cursor-pointer">Instagram</li>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground flex flex-col">
+                <a 
+                href="tel:+919833048421" 
+                className="hover:text-foreground cursor-pointer"
+              >
+                +91 9833048421
+              </a>
+              <a
+              href="https://www.facebook.com/share/1Gd28V7xAA/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+                <a
+              href="https://www.instagram.com/upptask"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
               </ul>
             </div>
 
@@ -66,8 +83,8 @@ export default function Footer() {
             © {new Date().getFullYear()} UppTask All rights reserved.
           </p>
 
-          {/* Social Icons */}
-          <div className="flex items-center gap-4">
+          {/* Social Icons
+           <div className="flex items-center gap-4">
             <a
               href="https://www.facebook.com/share/1Gd28V7xAA/"
               target="_blank"
@@ -83,7 +100,8 @@ export default function Footer() {
             >
               <FaInstagram className="w-4 h-4 text-muted-foreground hover:text-foreground cursor-pointer" />
             </a>
-          </div>
+          </div> */}
+         
         </div>
 
       </div>

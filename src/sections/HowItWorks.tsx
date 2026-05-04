@@ -29,9 +29,8 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-[#f7f8fb] px-6 py-28" id="how-it-works">
+    <section id="how-it-works" className="bg-[#f7f8fb] px-6 py-28">
       <div className="mx-auto max-w-7xl">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,12 +47,17 @@ export default function HowItWorks() {
           </p>
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative mt-28">
-          {/* Horizontal Line */}
           <div className="absolute left-0 right-0 top-6 hidden h-[2px] bg-[#dbe4f0] md:block" />
 
-          {/* Steps */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.8, ease: "easeInOut" }}
+            className="absolute left-0 right-0 top-6 hidden h-[3px] origin-left bg-blue-600 md:block"
+          />
+
           <div className="grid grid-cols-1 gap-14 md:grid-cols-5 md:gap-8">
             {steps.map((step, i) => (
               <motion.div
@@ -63,23 +67,20 @@ export default function HowItWorks() {
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.5,
-                  delay: i * 0.1,
+                  delay: i * 0.15,
                 }}
-                className="relative flex flex-col  rounded-2xl shadow-sm md:shadow-none p-2 md:p-0 items-center text-center border border-gray-300 md:border-none"
+                className="relative flex flex-col items-center rounded-2xl border border-gray-300 p-2 text-center shadow-sm md:border-none md:p-0 md:shadow-none"
               >
-                {/* Number Circle */}
                 <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-[#edf2f7] bg-white shadow-sm">
                   <span className="text-2xl font-bold text-blue-600">
                     {i + 1}
                   </span>
                 </div>
 
-                {/* Title */}
-                <h3 className="mt-10 text-[30px] font-bold text-[#0f172a] leading-none">
+                <h3 className="mt-10 text-[30px] font-bold leading-none text-[#0f172a]">
                   {step.title}
                 </h3>
 
-                {/* Description */}
                 <p className="mt-5 max-w-[220px] text-[17px] leading-8 text-[#64748b]">
                   {step.description}
                 </p>
