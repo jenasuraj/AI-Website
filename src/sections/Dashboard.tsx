@@ -61,7 +61,7 @@ export default function DashboardPreview() {
             </motion.div>
             {/* Image */}
             <img
-              src="https://picsum.photos/seed/saas-dashboard/1200/800"
+              src="/main-img.jpeg"
               alt="Dashboard Preview"
               className="rounded-2xl w-full h-full object-cover"
             />

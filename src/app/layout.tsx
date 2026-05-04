@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TeamTrackPro",
+  title: "UppTask",
   description: "Smart team management platform",
 };
 

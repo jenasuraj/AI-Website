@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+
 const cards = [
   {
     title: "Interior Designer",
@@ -24,8 +25,8 @@ const cards = [
       "/collection/real-estate.png",
   },
   {
-    title: "Render",
-    description: "Render",
+    title: "Event Management",
+    description: "Event Management",
     image:
          "/collection/render.jpeg",
   },

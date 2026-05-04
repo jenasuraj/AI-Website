@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Zap, TrendingUp, Clock, Users, DollarSign, Check } from "lucide-react";
+import Link from "next/link";
+
 
 export default function Benefits() {
   return (
@@ -113,17 +115,19 @@ export default function Benefits() {
               ))}
             </div>
 
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring" as const, stiffness: 45, damping: 16, delay: 0.9 }}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="mt-8 w-full rounded-xl bg-white text-blue-600 py-3 text-sm font-semibold hover:bg-gray-100 transition"
-            >
-              Start Managing Smarter
-            </motion.button>
+            <Link href="#contact">
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 45, damping: 16, delay: 0.9 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="mt-8 w-full bg-white text-blue-600 py-3 text-sm font-semibold hover:bg-gray-100 transition"
+          >
+            Start Managing Smarter
+          </motion.button>
+        </Link>
           </motion.div>
         </div>
 

@@ -18,12 +18,12 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
             <Link href="#feature" className="hover:text-gray-900 transition">Features</Link>
             <Link href="#how-it-works" className="hover:text-gray-900 transition">How it Works</Link>
-            <Link href="/about" className="hover:text-gray-900 transition">About</Link>
+            
           </nav>
 
           <div className="flex items-center gap-3">
             <Link
-              href="/trial"
+              href="#contact"
               className="hidden md:inline-flex bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 text-sm font-medium shadow-sm transition"
             >
               Start Free Trial
@@ -43,10 +43,9 @@ export default function Navbar() {
             <div className="flex flex-col gap-4 text-sm font-medium text-gray-600">
               <Link href="#feature" onClick={() => setOpen(false)} className="hover:text-gray-900 transition" >Features</Link>
               <Link href="#how-it-works" onClick={() => setOpen(false)} className="hover:text-gray-900 transition">How it Works</Link>
-              <Link href="/about" onClick={() => setOpen(false)} className="hover:text-gray-900 transition">About</Link>
 
               <Link
-                href="/trial"
+                href="#contact"
                 onClick={() => setOpen(false)}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium text-center transition"
               >

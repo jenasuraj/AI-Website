@@ -114,3 +114,8 @@
   @apply py-16 md:py-24;
 }
 }
+
+
+html {
+  scroll-behavior: smooth;
+}

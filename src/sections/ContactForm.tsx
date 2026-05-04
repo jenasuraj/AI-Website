@@ -44,7 +44,7 @@ export default function ContactForm() {
   const [countryCode, setCountryCode] = useState("+91");
 
   return (
-    <section className="w-full bg-white py-20 px-6 overflow-hidden">
+    <section className="w-full bg-white py-20 px-6 overflow-hidden" id="contact">
       <div className="mx-auto max-w-6xl grid lg:grid-cols-2 gap-10  items-center">
 
         {/* ── LEFT: Content ── */}
